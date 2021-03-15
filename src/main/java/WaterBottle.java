@@ -7,6 +7,12 @@ public class WaterBottle {
     }
 
     public int getVolume() {
-        return volume;
+        return this.volume;
     }
+
+    public int drink() {
+       this.volume = this.volume - 10;
+       return this.volume;
+    }
+
 }
