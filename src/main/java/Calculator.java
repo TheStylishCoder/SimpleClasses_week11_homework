@@ -15,4 +15,8 @@ public class Calculator {
     public int getValue2() {
         return value2;
     }
+
+    public int add() {
+        return value1 + value2;
+    }
 }
