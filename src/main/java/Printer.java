@@ -1,13 +1,19 @@
 public class Printer {
 
     private int numberOfSheets;
+    private int toner;
 
-    public Printer(int numberOfSheets){
+    public Printer(int numberOfSheets, int toner){
         this.numberOfSheets = numberOfSheets;
+        this.toner = toner;
     }
 
     public int getNumberOfSheets() {
         return numberOfSheets;
+    }
+
+    public int getToner() {
+        return toner;
     }
 
     //original function but changed to boolean below

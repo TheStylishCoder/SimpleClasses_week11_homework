@@ -8,7 +8,7 @@ public class PrinterTest {
     Printer printer;
     @Before
     public void before() {
-        printer = new Printer(15);
+        printer = new Printer(15, 50);
     }
 
     @Test
@@ -40,5 +40,10 @@ public class PrinterTest {
     public void doesNotPrintAsNotEnoughPaper(){
         assertEquals(false, printer.print(5, 4));
         assertEquals(15, printer.getNumberOfSheets());
+    }
+
+    @Test
+    public void hasToner(){
+        assertEquals(50, printer.getToner());
     }
 }
