@@ -15,4 +15,9 @@ public class CalculatorTest {
     public void hasValue1(){
         assertEquals(5, calculator.getValue1());
     }
+
+    @Test
+    public void hasValue2(){
+        assertEquals(3, calculator.getValue2());
+    }
 }
