@@ -27,4 +27,9 @@ public class Calculator {
     public int multiply() {
         return value1 * value2;
     }
+
+    public double divide() {
+        float answer = (float) value1 / (float) value2;
+        return answer;
+    }
 }

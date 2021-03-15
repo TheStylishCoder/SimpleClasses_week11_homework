@@ -8,12 +8,12 @@ public class CalculatorTest {
     Calculator calculator;
     @Before
     public void before(){
-        calculator = new Calculator(5,3);
+        calculator = new Calculator(6,3);
     }
 
     @Test
     public void hasValue1(){
-        assertEquals(5, calculator.getValue1());
+        assertEquals(6, calculator.getValue1());
     }
 
     @Test
@@ -23,21 +23,21 @@ public class CalculatorTest {
 
     @Test
     public void canAdd(){
-        assertEquals(8, calculator.add());
+        assertEquals(9, calculator.add());
     }
 
     @Test
     public void canSubtract() {
-        assertEquals(2, calculator.subtract());
+        assertEquals(3, calculator.subtract());
     }
 
     @Test
     public void canMultiply() {
-        assertEquals(15, calculator.multiply());
+        assertEquals(18, calculator.multiply());
     }
 
     @Test
     public void canDivide() {
-        assertEquals(1.66666667, calculator.divide());
+        assertEquals(2, calculator.divide(), 0.0);
     }
 }
