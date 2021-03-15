@@ -11,4 +11,8 @@ public class Calculator {
     public int getValue1() {
         return value1;
     }
+
+    public int getValue2() {
+        return value2;
+    }
 }
