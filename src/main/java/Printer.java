@@ -29,8 +29,9 @@ public class Printer {
 
     public boolean print(int numberOfPages, int numberOfCopies) {
         int paperNeeded = numberOfPages * numberOfCopies;
-        if(this.numberOfSheets >= paperNeeded){
+        if(this.numberOfSheets >= paperNeeded && this.toner >= paperNeeded){
             this.numberOfSheets = this.numberOfSheets - paperNeeded;
+            this.toner = this.toner - paperNeeded;
             return true;
         } else {
             return false;

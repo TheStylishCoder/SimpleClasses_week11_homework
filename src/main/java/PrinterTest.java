@@ -46,4 +46,11 @@ public class PrinterTest {
     public void hasToner(){
         assertEquals(50, printer.getToner());
     }
+
+    @Test
+    public void printsAsEnoughPaperAndToner(){
+        assertEquals(true, printer.print(4, 2));
+        assertEquals(42, printer.getToner());
+        assertEquals(7, printer.getNumberOfSheets());
+    }
 }
