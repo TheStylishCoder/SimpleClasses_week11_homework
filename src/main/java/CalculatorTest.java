@@ -20,4 +20,9 @@ public class CalculatorTest {
     public void hasValue2(){
         assertEquals(3, calculator.getValue2());
     }
+
+    @Test
+    public void canAdd(){
+        assertEquals(8, calculator.add());
+    }
 }
