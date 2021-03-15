@@ -16,9 +16,29 @@ public class PrinterTest {
         assertEquals(15, printer.getNumberOfSheets());
     }
 
+    //original test then modified below
+//    @Test
+//    public void printsAsEnoughPaper(){
+//        printer.print(4,2);
+//        assertEquals(7, printer.getNumberOfSheets());
+//    }
     @Test
     public void printsAsEnoughPaper(){
-        printer.print(4,2);
+        assertEquals(true, printer.print(4, 2));
         assertEquals(7, printer.getNumberOfSheets());
+    }
+
+
+    //original test then modified below
+//    @Test
+//    public void doesNotPrintAsNotEnoughPaper(){
+//        printer.print(5, 4);
+//        assertEquals(15, printer.getNumberOfSheets());
+//    }
+
+    @Test
+    public void doesNotPrintAsNotEnoughPaper(){
+        assertEquals(false, printer.print(5, 4));
+        assertEquals(15, printer.getNumberOfSheets());
     }
 }

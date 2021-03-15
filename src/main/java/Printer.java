@@ -10,13 +10,24 @@ public class Printer {
         return numberOfSheets;
     }
 
-    public int print(int numberOfPages, int numberOfCopies) {
+    //original function but changed to boolean below
+//    public int print(int numberOfPages, int numberOfCopies) {
+//        int paperNeeded = numberOfPages * numberOfCopies;
+//        if(this.numberOfSheets >= paperNeeded){
+//            this.numberOfSheets = this.numberOfSheets - paperNeeded;
+//            return this.numberOfSheets;
+//        } else {
+//            return this.numberOfSheets;
+//        }
+//    }
+
+    public boolean print(int numberOfPages, int numberOfCopies) {
         int paperNeeded = numberOfPages * numberOfCopies;
         if(this.numberOfSheets >= paperNeeded){
             this.numberOfSheets = this.numberOfSheets - paperNeeded;
-            return this.numberOfSheets;
+            return true;
         } else {
-            return this.numberOfSheets;
+            return false;
         }
     }
 }
