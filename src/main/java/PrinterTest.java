@@ -53,4 +53,26 @@ public class PrinterTest {
         assertEquals(42, printer.getToner());
         assertEquals(7, printer.getNumberOfSheets());
     }
+
+    @Test
+    public void doesNotPrintAsNotEnoughTonerOrPaper(){
+        assertEquals(false, printer.print(20, 3));
+        assertEquals(50, printer.getToner());
+        assertEquals(15, printer.getNumberOfSheets());
+    }
+
+    @Test
+    public void doesNotPrintAsEnoughTonerButNotEnoughPaper(){
+        assertEquals(false, printer.print(5, 4));
+        assertEquals(50, printer.getToner());
+        assertEquals(15, printer.getNumberOfSheets());
+    }
+
+    @Test
+    public void doesNotPrintAsEnoughPaperButNotEnoughToner(){
+        Printer lowTonerPrinter = new Printer(40, 5);
+        assertEquals(false, printer.print(4, 5));
+        assertEquals(5, lowTonerPrinter.getToner());
+        assertEquals(40, lowTonerPrinter.getNumberOfSheets());
+    }
 }
