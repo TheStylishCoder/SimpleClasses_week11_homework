@@ -20,4 +20,9 @@ public class WaterBottle {
         return this.volume;
     }
 
+    public int fill() {
+        this.volume = 100;
+        return this.volume;
+    }
+
 }
